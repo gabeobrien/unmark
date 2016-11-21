@@ -59,7 +59,7 @@ if ( ! function_exists('form_open'))
 		// If no action is provided then set to the current url
 		$action OR $action = $CI->config->site_url($CI->uri->uri_string());
 
-		$form = '<form action="'.$action.'"';
+		$form = '<form action="/unmark/'.$action.'"';
 
 		$form .= _attributes_to_string($attributes, TRUE);
 

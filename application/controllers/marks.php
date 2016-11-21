@@ -52,7 +52,7 @@ class Marks extends Plain_Controller
         }
         else {
             $this->data['mark'] = $user_mark;
-            $redirect           = '/mark/info/' . $user_mark->mark_id . '?bookmarklet=true';
+            $redirect           = '/unmark/mark/info/' . $user_mark->mark_id . '?bookmarklet=true';
         }
 
         // Figure what to do here (api, redirect or generate view)
@@ -334,7 +334,6 @@ class Marks extends Plain_Controller
     // The index of the marks page
     public function index()
     {
-
         /*
         - Figure the state of things by URL
             URLS:

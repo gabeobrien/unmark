@@ -186,7 +186,7 @@
 
     // Simple Ajax method to get a list of results from API
     unmark.getData = function (what, caller) {
-        unmark.ajax('/marks/get/'+what, 'post', '', caller);
+        unmark.ajax('/unmark/marks/get/'+what, 'post', '', caller);
     };
 
     // Simple Close Windows

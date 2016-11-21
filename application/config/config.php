@@ -15,8 +15,9 @@ $config['unmark_version'] = '1.7.1.2';
 | If this is not set then CodeIgniter will guess the protocol, domain and
 | path to your installation.
 |
+| $config['base_url']	= 'http://0.0.0.0:8080/unmark/';
 */
-$config['base_url']	= '';
+$config['base_url']	= '/unmark/';
 
 /*
 |--------------------------------------------------------------------------

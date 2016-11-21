@@ -191,7 +191,7 @@ class CI_Router {
 		// Is the method being specified?
 		if (strpos($this->default_controller, '/') !== FALSE)
 		{
-			$x = explode('/', $this->default_controller);
+			$x = explode('/unmark/', $this->default_controller);
 
 			$this->set_class($x[0]);
 			$this->set_method($x[1]);

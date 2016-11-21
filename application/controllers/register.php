@@ -33,7 +33,7 @@ class Register extends Plain_Controller
 		// Add user data to session
 		// Set user id
 		// Add defualt marks
-		// Set redirect to /marks
+		// Set redirect to /unmark/marks
 		// Set default marks (can't really do this)
 		if (isset($user->user_id)) {
 			$this->sessionAddUser($user);
@@ -53,7 +53,7 @@ class Register extends Plain_Controller
 			}
 
 			// set redirect path
-			$redirect              = '/marks';
+			$redirect              = '/unmark/marks';
 			$this->data['success'] = true;
 			$this->data['email']   = $email;
 

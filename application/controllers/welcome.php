@@ -10,7 +10,7 @@ class Welcome extends Plain_Controller
 
 	public function index()
 	{
-		$this->redirectIfLoggedIn('/marks');
+		$this->redirectIfLoggedIn('/unmark/marks');
 		$this->view('welcome', array('no_header' => true, 'no_footer' => true));
 	}
 

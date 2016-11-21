@@ -101,7 +101,7 @@
     unmark.mark_archive = function (archive_link) {
         var id = archive_link.data("id");
 
-        unmark.ajax('/mark/archive/'+id, 'post', '', function(res) {
+        unmark.ajax('/unmark/mark/archive/'+id, 'post', '', function(res) {
             if(res.mark.archived_on !== null) {
                 $('#mark-'+id).fadeOut();
                 unmark.sidebar_collapse();
@@ -130,9 +130,9 @@
 
     // Archive all marks over a year old
     unmark.archive_all = function () {
-        unmark.ajax('/marks/archive/old', 'post', '', function (res) {
+        unmark.ajax('/unmark/marks/archive/old', 'post', '', function (res) {
             if (res.archived === true) {
-                window.location = "/marks";
+                window.location = "/unmark/marks";
             } else {
                 alert('Sorry, We could not archive the links at this time. Please try again.')
             }
@@ -163,7 +163,7 @@
             }
             
             query = 'title=' + unmark.urlEncode(title) + '&notes=' + unmark.urlEncode(notes);
-            unmark.ajax('/mark/edit/'+id, 'post', query, function(res) {
+            unmark.ajax('/unmark/mark/edit/'+id, 'post', query, function(res) {
                 $('#mark-'+id).find('.note-placeholder').text(notes);
             });
         }
@@ -263,7 +263,7 @@
     unmark.saveNotes = function (id, note, title) {
         if (title == '') return;
         var query = 'title='+unmark.urlEncode(title)+'&notes=' + unmark.urlEncode(note);
-        unmark.ajax('/mark/edit/'+id, 'post', query);
+        unmark.ajax('/unmark/mark/edit/'+id, 'post', query);
     };
 
     // Method for adding a label
@@ -286,7 +286,7 @@
             body_class = $('body').attr('class');
             pattern = new RegExp('label');
             query = 'label_id=' + label_id;
-            unmark.ajax('/mark/edit/'+mark, 'post', query, function(res) {
+            unmark.ajax('/unmark/mark/edit/'+mark, 'post', query, function(res) {
                 labels_list.fadeOut();
                 btn.text(label_name);
                 unmark.swapClass(btn, 'label-*', 'label-'+label_id);
@@ -376,7 +376,7 @@
             // First Linkify Notes
             notetext = notetext.replace(/(https?:\/\/[^\]\s]+)(?: ([^\]]*))?/g, "<a target='_blank' href='$1'>$1</a>");
             // Then Tagify It
-            notetext = notetext.replace(/#(\S*)/g,'<a href="/marks/tag/$1">#$1</a>');
+            notetext = notetext.replace(/#(\S*)/g,'<a href="/unmark/marks/tag/$1">#$1</a>');
         } else {
             note.prev().html('Click To Add A Note or Edit Mark <i class="icon-edit"></i>');
         }
@@ -394,7 +394,7 @@
             view = btn.data('view');
 
         // Request to delete the mark
-        unmark.ajax('/mark/delete/'+mark_id, 'post', '', function (res) {
+        unmark.ajax('/unmark/mark/delete/'+mark_id, 'post', '', function (res) {
             if (res.mark.active === "0") {
                 if (view === "bookmarklet"){
                     unmark.close_window(true);

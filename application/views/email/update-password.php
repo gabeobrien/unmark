@@ -125,9 +125,9 @@
 										<div class="imgpop">
 											<a href="https://unmark.it" style="text-decoration:none;">
 												<!-- Logo Mark -->
-												<img src="{BASEURL}assets/images/logo.png" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit" class="logo" height="40px">
+												<img src="/unmark/assets/images/logo.png" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit" class="logo" height="40px">
 												<!-- Logo Text -->
-												<img src="{BASEURL}assets/images/logo_text_light.png" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;margin-left: 8px;vertical-align:12px;" st-image="edit" height="20px">
+												<img src="/unmark/assets/images/logo_text_light.png" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;margin-left: 8px;vertical-align:12px;" st-image="edit" height="20px">
 											</a>
 										</div>
 									</td>
@@ -281,7 +281,7 @@
 											<tr>
 												<td width="auto" align="center" valign="middle" height="36" style=" background-color:#49b3e2; background-clip: padding-box;font-family: 'Montserrat', Helvetica, Arial, sans-serif;font-size: 12px;text-transform: uppercase;letter-spacing:1px; text-align:center;  color:#ffffff; font-weight: 300; padding-left:25px; padding-right:25px;">
                                                    <span style="color: #ffffff; font-weight: 300;">
-                                                      <a style="color: #ffffff; text-align:center;text-decoration: none;" href="#">My Account</a>
+                                                      <a style="color: #ffffff; text-align:center;text-decoration: none;" href="/unmark/#">My Account</a>
                                                    </span>
 												</td>
 											</tr>

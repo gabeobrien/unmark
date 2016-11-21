@@ -10,7 +10,7 @@ $config['error_codes'] = array();
 
 // Marks - Level 1 - 29
 $config['error_codes'][1] = 'Mark could not be archived.';
-$config['error_codes'][2] = 'No marks found.';
+$config['error_codes'][2] = 'No marks found.?';
 $config['error_codes'][3] = 'Mark could not be updated.';
 $config['error_codes'][4] = 'Mark with this id could not be found for this account.';
 $config['error_codes'][5] = 'Mark could not be restored.';

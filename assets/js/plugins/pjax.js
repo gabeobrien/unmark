@@ -468,7 +468,7 @@ function fallbackPjax(options) {
 
   var form = $('<form>', {
     method: method === 'GET' ? 'GET' : 'POST',
-    action: url,
+    action: "/unmark/"+url,
     style: 'display:none'
   })
 
